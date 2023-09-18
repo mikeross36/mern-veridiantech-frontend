@@ -11,7 +11,7 @@ export function addReviewAction(id, content) {
       const config = {
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer${currentUser.token}`,
+          Authorization: `Bearer ${currentUser.token}`,
         },
       };
       const { data } = await api.post(
