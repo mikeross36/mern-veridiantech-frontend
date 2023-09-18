@@ -6,7 +6,7 @@ const reviewId = "reviewId";
 export function addReviewAction(id, content) {
   return async function (dispatch, getState) {
     dispatch({ type: "ADD_REVIEW_REQUEST" });
-    const currentUser = getState().loginUser.currerntUser;
+    const currentUser = getState().loginUser.currentUser;
     try {
       const config = {
         headers: {
