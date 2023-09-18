@@ -1,0 +1,83 @@
+@use "../variables" as *;
+@use "../mixins";
+
+.signup {
+  &__content {
+    margin: 0 auto;
+    max-width: 20rem;
+    padding: 40px 30px;
+    background-color: rgba($cardCrl, 0.1);
+    border-radius: $radius;
+    box-shadow: $boxSh;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    .signup__form {
+      margin: 0 auto;
+      max-width: 20rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    .form__field {
+      margin: 0 auto;
+      height: 80px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      position: relative;
+
+      .form__input {
+        margin: 0 auto;
+        width: 80%;
+        height: 3rem;
+        padding-left: 35px;
+        outline: none;
+        border: none;
+        font-size: $fontMd;
+        background: $bodyClr;
+        color: $textClrLight;
+        border-radius: 25px;
+        box-shadow: inset 2px 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      & input:focus {
+        box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #ffffff73;
+      }
+
+      & input::placeholder {
+        color: $textClr;
+      }
+
+      & .span {
+        padding-left: 5px;
+        position: absolute;
+        color: $btnClrLg;
+        width: 30px;
+        line-height: 55px;
+      }
+    }
+
+    .signup__button {
+      justify-self: center;
+      margin: $mb-1 0;
+    }
+
+    .login {
+      margin: 10px;
+      color: $btnClr;
+      font-size: $fontMd;
+
+      & a {
+        color: $btnClr;
+        text-decoration: none;
+        margin-left: 0.5rem;
+      }
+
+      & a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

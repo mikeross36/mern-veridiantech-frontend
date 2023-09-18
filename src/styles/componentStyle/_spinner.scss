@@ -1,0 +1,63 @@
+@use "../variables" as *;
+@use "../mixins";
+
+.loader__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.loading__bar {
+  position: absolute;
+  top: 10%;
+  width: 7rem;
+  height: 7rem;
+  background: transparent;
+  border: px solid $btnClrLg;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 7rem;
+  font-family: sans-serif;
+  font-size: $fontMd;
+  color: $firstClr;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px $containerClr;
+  box-shadow: 0 0 10px rgba($containerClr, 0.5);
+}
+
+.loading__bar:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 5px solid $firstClr;
+  border-right: 5px solid $firstClr;
+  border-radius: 50%;
+  animation: animateC 2s linear infinite;
+}
+
+@keyframes animateC {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(405deg);
+  }
+}

@@ -1,0 +1,54 @@
+@use "../variables" as *;
+@use "../mixins";
+
+.drone__reviews {
+  margin-top: 2rem;
+  font-size: $fontSm;
+  color: $btnClrLg;
+
+  &-title {
+    text-align: center;
+    padding: 1rem;
+    color: $btnClrLg;
+    text-transform: capitalize;
+  }
+
+  .reviews__list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+
+    .review__card {
+      padding: 0.5rem 2rem;
+      background-color: $bodyClr;
+      border-radius: $radius;
+
+      .review__avatar {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: $fontSm;
+
+        &-img {
+          width: 30px;
+          border-radius: $radius;
+        }
+
+        .review__user {
+          font-weight: $weightLg;
+        }
+      }
+
+      .review__content {
+        padding-top: 0.5rem;
+        font-weight: normal;
+        text-transform: none;
+        font-style: italic;
+        line-height: 1.4;
+      }
+    }
+  }
+}
