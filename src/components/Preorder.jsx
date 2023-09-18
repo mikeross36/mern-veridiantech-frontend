@@ -55,7 +55,7 @@ export default function Preorder() {
             <>
               <div className="preorder__total">
                 {!currentUser ? (
-                  <Link to="/login-user">
+                  <Link to="/login-user" onClick={() => setPreorderOpen(false)}>
                     <button className="login__preorder">login to order</button>
                   </Link>
                 ) : (
